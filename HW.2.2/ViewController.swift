@@ -8,10 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var tintView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tintView.layer.cornerRadius = 15
     }
 
 

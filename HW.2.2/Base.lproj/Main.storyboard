@@ -109,6 +109,9 @@
                             <constraint firstItem="MWT-DO-M7M" firstAttribute="top" secondItem="moc-F1-SVl" secondAttribute="bottom" constant="70" id="xTb-4J-pfT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tintView" destination="moc-F1-SVl" id="Cqd-ML-ch8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
