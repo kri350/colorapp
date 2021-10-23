@@ -55,18 +55,27 @@
                                         <imageReference key="minimumValueImage" image="minus" catalog="system" symbolScale="small" renderingMode="template"/>
                                         <imageReference key="maximumValueImage" image="plus" catalog="system" symbolScale="small" renderingMode="template"/>
                                         <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="B6C-hN-oWD"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dgj-gY-CDN">
                                         <rect key="frame" x="-2" y="47" width="287.5" height="31"/>
                                         <imageReference key="minimumValueImage" image="minus" catalog="system" symbolScale="small" renderingMode="template"/>
                                         <imageReference key="maximumValueImage" image="plus" catalog="system" symbolScale="small" renderingMode="template"/>
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="azj-Nl-ihP"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aQz-56-6tO">
                                         <rect key="frame" x="-2" y="94" width="287.5" height="31"/>
                                         <imageReference key="minimumValueImage" image="minus" catalog="system" symbolScale="small" renderingMode="template"/>
                                         <imageReference key="maximumValueImage" image="plus" catalog="system" symbolScale="small" renderingMode="template"/>
                                         <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
+                                        <connections>
+                                            <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="niW-ph-IBS"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -110,6 +119,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueSlider" destination="aQz-56-6tO" id="6uN-fF-Wja"/>
+                        <outlet property="blueValue" destination="LpM-iM-DHi" id="Uu1-SB-cvc"/>
+                        <outlet property="greenSlider" destination="dgj-gY-CDN" id="h0R-L1-hyM"/>
+                        <outlet property="greenValue" destination="Hzm-Qq-PzX" id="TQW-hP-Mnm"/>
+                        <outlet property="redSlider" destination="HbY-Fd-iLz" id="a7C-5I-czS"/>
+                        <outlet property="redValue" destination="9Sq-co-2n2" id="Thi-i8-8c6"/>
                         <outlet property="tintView" destination="moc-F1-SVl" id="Cqd-ML-ch8"/>
                     </connections>
                 </viewController>
