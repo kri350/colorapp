@@ -25,14 +25,16 @@ class ViewController: UIViewController {
 
     @IBAction func redSliderAction() {
         redValue.text = String(format: "%.3f", redSlider.value)
+        tintView.layer.backgroundColor = .init(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     
     @IBAction func greenSliderAction() {
         greenValue.text = String(format: "%.3f", greenSlider.value)
+        tintView.layer.backgroundColor = .init(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     @IBAction func blueSliderAction() {
         blueValue.text = String(format: "%.3f", blueSlider.value)
-        
+        tintView.layer.backgroundColor = .init(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
 }
 
