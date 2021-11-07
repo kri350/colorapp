@@ -32,8 +32,8 @@ private var newBackgroundColor = UIColor (
 //        settingsVC.delegate = self
     }
 //    extension ColorViewController: SettingsViewControllerDelegate {
-//        func setNewBackgroundColor (for newBackgroundColor: UIColor) {
-//            self.newBackgroundColor = newBackgroundColor
+//        func setNewBackgroundColor (for red: UIColor, green: UIColor, blue: UIColor) {
+//
 //        }
 //    }
 }
