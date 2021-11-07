@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HnK-qi-jdu">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW_2_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="HW_2_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,20 +113,33 @@
                                     <constraint firstAttribute="height" constant="128" id="6Rn-mW-I1J"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYx-Z7-EKe">
+                                <rect key="frame" x="153" y="372" width="69" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Done">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="moc-F1-SVl" secondAttribute="trailing" constant="16" id="6eM-0U-Vho"/>
                             <constraint firstAttribute="trailing" secondItem="orC-5k-wUt" secondAttribute="trailing" constant="16" id="8YB-u4-yvJ"/>
+                            <constraint firstItem="UYx-Z7-EKe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="99f-4h-y4G"/>
                             <constraint firstItem="orC-5k-wUt" firstAttribute="top" secondItem="moc-F1-SVl" secondAttribute="bottom" constant="53" id="Cfg-fO-SRp"/>
                             <constraint firstItem="orC-5k-wUt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EQy-Ro-s8d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="moc-F1-SVl" secondAttribute="trailing" constant="16" id="MgL-MM-pvC"/>
                             <constraint firstItem="moc-F1-SVl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="R6i-I1-A6W"/>
+                            <constraint firstItem="UYx-Z7-EKe" firstAttribute="top" secondItem="orC-5k-wUt" secondAttribute="bottom" constant="33" id="bZO-6f-aLV"/>
                             <constraint firstItem="moc-F1-SVl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fsE-Jn-loP"/>
                             <constraint firstItem="moc-F1-SVl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="vaa-Ho-CeV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="BXG-jl-Tyt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jIx-MP-Led"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rCo-in-DNr"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="blueSlider" destination="aQz-56-6tO" id="6uN-fF-Wja"/>
                         <outlet property="blueValue" destination="LpM-iM-DHi" id="Uu1-SB-cvc"/>
@@ -139,12 +152,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+            <point key="canvasLocation" x="956" y="81.409295352323838"/>
+        </scene>
+        <!--Color View Controller-->
+        <scene sceneID="5SA-bn-VaG">
+            <objects>
+                <viewController id="lit-lf-Sni" customClass="ColorViewController" customModule="HW_2_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Hy-hK-Cfu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="L6l-K2-b5c"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="A0b-8K-tjR">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" image="square.and.pencil" catalog="system" id="zMC-en-sFP">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="DcR-Go-3XT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ei-DF-RQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="82.3088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S9G-eb-9Ui">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HnK-qi-jdu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Gy-pt-Ok2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lit-lf-Sni" kind="relationship" relationship="rootViewController" id="cMU-gX-yJ5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pwg-u9-WST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-497" y="83"/>
         </scene>
     </scenes>
     <resources>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
